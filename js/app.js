@@ -160,7 +160,7 @@ const App = {
   --------------------------------------------------------- */
   bindHeaderControls() {
     document.getElementById("themeToggle").addEventListener("click", () => {
-      this.state.theme = this.state.theme === "dark" ? "dark" : "dark";
+      this.state.theme = this.state.theme === "light" ? "dark" : "dark";
       this.applyTheme();
       this.save();
     });
@@ -182,7 +182,7 @@ const App = {
 
         this.state = data;
         if (!this.state.activeGroup) this.state.activeGroup = "A";
-        if (!this.state.theme) this.state.theme = "dark";
+        if (!this.state.theme) this.state.theme = "light";
 
         this.save();
         this.applyTheme();
