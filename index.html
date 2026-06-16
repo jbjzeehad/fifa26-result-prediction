@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FIFA World Cup 2026</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ===================== HEADER ===================== -->
+    <header class="app-header">
+      FIFA WORLD CUP <span class="accent">2026</span><br />
+      RESULT + PREDICTION
+    </header>
+
+    <!-- ===================== TAB NAVIGATION ===================== -->
+    <nav class="tabs">
+      <button class="tab-btn active" data-tab="groupStageTab">
+        Group Stage
+      </button>
+      <button class="tab-btn" data-tab="standingsTab">Standings</button>
+      <button class="tab-btn" data-tab="thirdPlaceTab">Best Third Place</button>
+      <button class="tab-btn" data-tab="knockoutTab">Knockout Stage</button>
+      <div id="themeToggle" class="header-controls">
+        <!-- <button id="themeToggle"></button> -->
+        <!-- <button id="exportBtn">⬇️ Export Predictions</button>
+        <label for="importInput">⬆️ Import Predictions</label>
+        <input type="file" id="importInput" accept="application/json" /> -->
+        <!-- <button id="resetBtn">♻️</button> -->
+      </div>
+    </nav>
+
+    <!-- ===================== GROUP STAGE TAB ===================== -->
+    <section id="groupStageTab" class="tab-section active">
+      <!-- <div class="info-banner">
+        Predict the score for every group stage match. Standings and
+        qualification update automatically as you type.
+      </div> -->
+
+      <div id="groupSelector" class="group-selector"></div>
+
+      <h2 id="groupStageTitle" class="section-title"></h2>
+      <div id="matchCards" class="match-cards"></div>
+
+      <h3 class="sub-title"></h3>
+      <div id="miniStandingsTable"></div>
+    </section>
+
+    <!-- ===================== STANDINGS TAB ===================== -->
+    <section id="standingsTab" class="tab-section">
+      <div id="standingsGroupSelector" class="group-selector"></div>
+
+      <h2 id="standingsTitle" class="section-title"></h2>
+      <div id="standingsTable"></div>
+
+      <div class="legend">
+        <span><span class="dot qualified"></span> Qualified</span>
+        <span><span class="dot third-qualified"></span> 3rd place</span>
+        <span><span class="dot eliminated"></span> Eliminated</span>
+      </div>
+    </section>
+
+    <!-- ===================== THIRD PLACE TAB ===================== -->
+    <section id="thirdPlaceTab" class="tab-section">
+      <!-- <div class="info-banner">
+        The 3rd-placed team from each of the 12 groups is ranked here using
+        points, goal difference, then goals scored. The best 8 advance to the
+        Round of 32.
+      </div> -->
+      <div id="thirdPlaceTable"></div>
+    </section>
+
+    <!-- ===================== KNOCKOUT TAB ===================== -->
+    <section id="knockoutTab" class="tab-section">
+      <div id="knockoutNotice" class="info-banner" style="display: none"></div>
+
+      <div id="championDisplay" class="champion-banner"></div>
+
+      <!-- <div class="info-banner">
+        Tap a team name in any match to set it as the winner. The result
+        automatically advances to the next round. Tap again to undo.
+      </div> -->
+
+      <div id="knockoutBracket" class="bracket-wrapper"></div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <!-- <footer class="app-footer">FIFA WORLD CUP 2026</footer> -->
+
+    <!-- ===================== SCRIPTS ===================== -->
+    <script src="data/teams.js"></script>
+    <script src="data/fixtures.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/teams.js"></script>
+    <script src="js/matches.js"></script>
+    <script src="js/standings.js"></script>
+    <script src="js/thirdPlace.js"></script>
+    <script src="js/knockout.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
