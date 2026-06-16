@@ -160,7 +160,7 @@ const App = {
   --------------------------------------------------------- */
   bindHeaderControls() {
     document.getElementById("themeToggle").addEventListener("click", () => {
-      this.state.theme = this.state.theme === "dark" ? "light" : "dark";
+      this.state.theme = this.state.theme === "dark" ? "dark" : "dark";
       this.applyTheme();
       this.save();
     });
