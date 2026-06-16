@@ -13,7 +13,7 @@ const App = {
 
     // Defensive defaults (e.g. after importing an older/partial file)
     if (!this.state.activeGroup) this.state.activeGroup = "A";
-    if (!this.state.theme) this.state.theme = "light";
+    if (!this.state.theme) this.state.theme = "dark";
     if (!this.state.groupMatches) this.state = createDefaultState();
 
     this.applyTheme();
@@ -182,7 +182,7 @@ const App = {
 
         this.state = data;
         if (!this.state.activeGroup) this.state.activeGroup = "A";
-        if (!this.state.theme) this.state.theme = "light";
+        if (!this.state.theme) this.state.theme = "dark";
 
         this.save();
         this.applyTheme();
